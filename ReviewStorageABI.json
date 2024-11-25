@@ -1,0 +1,112 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_rating",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_reviewText",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_productId",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_userId",
+                "type": "string"
+            }
+        ],
+        "name": "addReview",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllReviews",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "rating",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reviewText",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "productId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "userId",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct ReviewStorage.Review[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reviewCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "reviews",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "rating",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "reviewText",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "productId",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "userId",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
