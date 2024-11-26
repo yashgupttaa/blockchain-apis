@@ -4,8 +4,7 @@
   "description": "blochchain based backend",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "npm run dev"
+    "dev": "node index.js"
   },
   "keywords": [
     "wisechoice"
