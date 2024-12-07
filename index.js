@@ -12,24 +12,10 @@ const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const contractAddress = process.env.CONTRACT_ADDRESS;
 const contract = new ethers.Contract(contractAddress, abi, wallet);
 
-console.log("contract", contract);
-
-
-// app.post('/addReview', async (req, res) => {
-//     const { rating, reviewText, productId, userId } = req.body;
-//     try {
-//         const tx = await contract.addReview(rating, reviewText, productId, userId);
-//         await tx.wait();
-//         res.send({ message: "Review added successfully!", tx });
-//     } catch (error) {
-//         res.status(500).send({ error: error.message });
-//     }
-// });
-
 app.post('/addReview', async (req, res) => {
-    const { rating, reviewText, productId, userId } = req.body;
+    const { rating, reviewText, productId, userId, createdAt } = req.body;
     try {
-        const tx = await contract.addReview(rating, reviewText, productId, userId);
+        const tx = await contract.addReview(rating, reviewText, productId, userId, createdAt);
         res.send({
             message: "Transaction submitted. Review will be added upon confirmation.",
             txHash: tx.hash
@@ -48,7 +34,8 @@ app.get('/getReviews', async (req, res) => {
             rating: review.rating.toString(),
             reviewText: review.reviewText,
             productId: review.productId,
-            userId: review.userId
+            userId: review.userId,
+            createdAt: review.createdAt
         }));
 
         res.send(formattedReviews);

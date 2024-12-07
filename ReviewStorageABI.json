@@ -20,6 +20,11 @@
                 "internalType": "string",
                 "name": "_userId",
                 "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_createdAt",
+                "type": "string"
             }
         ],
         "name": "addReview",
@@ -51,6 +56,11 @@
                     {
                         "internalType": "string",
                         "name": "userId",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "createdAt",
                         "type": "string"
                     }
                 ],
@@ -103,6 +113,11 @@
             {
                 "internalType": "string",
                 "name": "userId",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "createdAt",
                 "type": "string"
             }
         ],
