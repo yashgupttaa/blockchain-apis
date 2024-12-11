@@ -8,6 +8,11 @@
             },
             {
                 "internalType": "string",
+                "name": "_reviewTitle",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
                 "name": "_reviewText",
                 "type": "string"
             },
@@ -20,6 +25,11 @@
                 "internalType": "string",
                 "name": "_userId",
                 "type": "string"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_images",
+                "type": "string[]"
             },
             {
                 "internalType": "string",
@@ -45,6 +55,11 @@
                     },
                     {
                         "internalType": "string",
+                        "name": "reviewTitle",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
                         "name": "reviewText",
                         "type": "string"
                     },
@@ -57,6 +72,11 @@
                         "internalType": "string",
                         "name": "userId",
                         "type": "string"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "images",
+                        "type": "string[]"
                     },
                     {
                         "internalType": "string",
@@ -99,6 +119,11 @@
                 "internalType": "uint256",
                 "name": "rating",
                 "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "reviewTitle",
+                "type": "string"
             },
             {
                 "internalType": "string",

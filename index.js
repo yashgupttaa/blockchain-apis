@@ -13,9 +13,9 @@ const contractAddress = process.env.CONTRACT_ADDRESS;
 const contract = new ethers.Contract(contractAddress, abi, wallet);
 
 app.post('/addReview', async (req, res) => {
-    const { rating, reviewText, productId, userId, createdAt } = req.body;
+    const { rating, reviewTitle, reviewText, productId, userId, images, createdAt } = req.body;
     try {
-        const tx = await contract.addReview(rating, reviewText, productId, userId, createdAt);
+        const tx = await contract.addReview(rating, reviewTitle, reviewText, productId, userId, images, createdAt);
         res.send({
             message: "Transaction submitted. Review will be added upon confirmation.",
             txHash: tx.hash
@@ -32,9 +32,11 @@ app.get('/getReviews', async (req, res) => {
         const reviews = await contract.getAllReviews();
         const formattedReviews = reviews.map((review) => ({
             rating: review.rating.toString(),
+            reviewTitle: review.reviewTitle,
             reviewText: review.reviewText,
             productId: review.productId,
             userId: review.userId,
+            images: review.images,
             createdAt: review.createdAt
         }));
 
